@@ -1,0 +1,65 @@
+@import "lib/project.scss";
+@import "lib/mixins.scss";
+
+@include reset();
+
+.wraper{
+    max-width: $wrapper_size;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 30px;
+    overflow: hidden;
+    
+    @media screen and (max-width: $break_md){
+        padding: 0 15px;
+    }
+    
+    @media screen and (max-width: $break_xs){
+        padding: 0 10px;
+    }
+}
+
+.row{
+    border: 1px solid #ff0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profit{
+    background: #232324;
+    padding: 15px 0;
+
+    .item{
+        $offset: ($basefont / 2);
+
+        text-align: center;
+        margin: $offset;
+        padding: $offset;
+        flex-basis: 200px;
+        
+        .subtitle{
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 3px 0;
+        }
+        
+        .text{
+            color: $color_gold;
+            
+            &:hover{
+                color: blue;
+            }
+            
+            @media screen and (max-width: $break_md){
+                font-size: 1.2rem;
+            }
+        }
+        
+        input{
+            @include placeholder(#f0f);
+        }
+    }
+}
+
+
