@@ -1,0 +1,199 @@
+/* сотовый телефон */
+@media (max-width: 767px) {
+
+    .logo img {
+        width: 70px;
+        top:-15px;
+    }
+    .menu-line{
+        padding: 20px 0;
+    }
+
+    .navbar-nav {
+        float: none;
+        margin: 50px 0 0 0;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        margin: 10px 0;
+    }
+
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+        background-color: transparent;
+    }
+
+    .navbar-toggle {
+        margin: 0;
+        padding: 6px;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: #d2a443;
+        border: none;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #d2a443;
+    }
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        border: none;
+        box-shadow: none;
+    }
+
+    .nav>li.lang{
+        display: inline-block;
+    }
+
+    .navbar-default .navbar-nav>li:before{
+        display: none;
+    }
+    .navbar-default .navbar-nav>li span:before{
+        display: none;
+    }
+
+    .main-slider{
+        top:65px;
+    }
+
+    .work{
+        text-align: center;
+        font-size: 20px;
+    }
+    footer .social{
+        text-align: center;
+        float: none;
+    }
+    .social li{
+        display: inline-block;
+        float: none;
+        margin: 0 2px;
+    }
+    .social li a{
+        display: inline-block;
+        width: 36px;
+        height: 36px;
+    }
+    footer .arrow-line{
+        width: 92%;
+    }
+    .menu-line .arrow-line{
+        display: none;
+    }
+
+    .grid-item{
+        width: 50%;
+        padding: 15px;
+    }
+
+    .container.padd{
+        padding-top: 0;
+    }
+    .contacts-list{
+        height: auto;
+        margin-bottom: 30px;
+        padding: 0;
+        display: block;
+        font-size: 20px;
+        text-align: center;
+    }
+    .c-ico{
+        display: inline-block;
+    }
+    .c-ico1{
+        background: url("../img/c1-ico.png") 0 0 no-repeat;
+    }
+    .c-ico2{
+        background: url("../img/c2-ico.png") 5px 0 no-repeat;
+    }
+    .c-ico3{
+        background: url("../img/c3-ico.png") 0 4px no-repeat;
+        background-size: 22px auto;
+    }
+    .contacts{
+        padding: 0;
+    }
+
+    footer{
+        padding: 20px 0 0 0;
+    }
+
+    .static footer{
+        position: static;
+    }
+
+    .index-page.static footer{
+        position: absolute;
+    }
+
+    .map{
+        height: 300px;
+        overflow: hidden;
+    }
+    .quote {
+        bottom: 120px;
+        width: 180px;
+    }
+    .gal-pic{
+        min-height: 96px;
+    }
+    .about-text {
+        padding: 10px 20px;
+        font-size: 15px;
+        text-align: justify;
+    }
+
+
+}
+
+/* планшет */
+@media (min-width: 767px) and (max-width: 1024px) {
+
+   /* .navbar-header {
+        float: none;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-collapse {
+        border-top: none;
+        box-shadow: 0;
+    }
+
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+
+    .navbar-nav {
+        float: none !important;
+        margin: 7.5px 0;
+    }
+
+    .navbar-nav > li {
+        float: none;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+
+    .navbar-default .navbar-nav > li > a {
+        margin: 12px 0 0 0;
+    }
+
+    .navbar-default .navbar-toggle:hover,
+    .navbar-default .navbar-toggle:focus {
+        background-color: transparent;
+    }*/
+
+
+
+}
+
+
+
+
+
