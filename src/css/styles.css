@@ -1,181 +1,208 @@
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-input,
-textarea,
-p,
-blockquote,
-th,
-td,
-menu {
-  margin: 0;
-  padding: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-fieldset,
-img,
-abbr {
-  border: 0;
-}
-
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var {
-  font-style: normal;
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Regular.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.otf") format("opentype"), url("../fonts/OpenSans-Regular.svg") format("svg"), url("../fonts/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  /* Modern Browsers */
   font-weight: normal;
-}
+  font-style: normal; }
 
-ul li,
-menu li {
+@font-face {
+  font-family: "Intro";
+  src: url("../fonts/intro.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/intro.eot?#iefix") format("embedded-opentype"), url("../fonts/intro.otf") format("opentype"), url("../fonts/intro.svg") format("svg"), url("../fonts/intro.ttf") format("truetype"), url("../fonts/intro.woff") format("woff"), url("../fonts/intro.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-size: 14px;
+  line-height: 16px;
+  color: #242935;
+  font-family: "Open Sans";
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,fdf6e8+100 */
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-linear-gradient(45deg, #ffffff 0%, #fdf6e8 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, #ffffff 0%, #fdf6e8 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, #ffffff 0%, #fdf6e8 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fdf6e8',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */ }
+  body:before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url("../img/cover.svg") 0 0 no-repeat;
+    content: "";
+    display: block;
+    width: 700px;
+    height: 100%; }
+
+a:hover {
+  text-decoration: none; }
+
+a:focus {
+  text-decoration: none;
+  color: #ffffff; }
+
+.container {
+  max-width: 100%;
+  padding: 0 35px;
+  position: relative; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 0 35px;
+  left: 0;
+  top: 45px; }
+
+.card_type {
   list-style: none;
-}
+  margin: 0;
+  padding: 2px 0 0 0;
+  text-align: center; }
+  .card_type li {
+    display: inline-block;
+    margin: 0 20px; }
+  .card_type a {
+    color: #B69768;
+    font-size: 18px; }
+    .card_type a:hover {
+      text-decoration: none; }
 
-caption,
-th {
-  text-align: left;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-sup {
-  vertical-align: text-top;
-}
-
-sub {
-  vertical-align: text-bottom;
-}
-
-input,
-textarea,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-legend {
-  color: #000;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-main {
-  display: block;
-}
-
-.wraper {
-  max-width: 1280px;
-  margin: 0 auto;
-  height: 100%;
-  padding: 0 30px;
+.lang {
+  float: right;
+  border: 1px solid #BD9D61;
+  border-radius: 20px;
   overflow: hidden;
-}
+  margin-top: -4px; }
+  .lang a {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 35px;
+    padding: 0 16px;
+    color: #BD9D61;
+    display: inline-block;
+    border-radius: 20px; }
+    .lang a:last-child {
+      margin-left: -4px; }
+  .lang .active {
+    background: #BD9D61;
+    color: #ffffff; }
 
-@media screen and (max-width: 992px) {
-  .wraper {
-    padding: 0 15px;
-  }
-}
+.content_section {
+  width: 60%; }
 
-@media screen and (max-width: 560px) {
-  .wraper {
-    padding: 0 10px;
-  }
-}
+h1 {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: "Intro";
+  background: -webkit-linear-gradient(#dbb17d, #bd9e73);
+  background: linear-gradient(#dbb17d, #bd9e73);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 50px 0; }
 
-.row {
-  border: 1px solid #ff0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+.main_block h1 {
+  font-size: 64px;
+  line-height: 64px;
+  margin: 50px 0; }
 
-.profit {
-  background: #232324;
-  padding: 15px 0;
-}
+.info_item {
+  min-height: 90px;
+  margin-bottom: 40px; }
+  .info_item img {
+    float: left; }
+  .info_item .text {
+    font-size: 14px;
+    line-height: 19px;
+    margin-left: 70px; }
+  .info_item .title {
+    color: #C8A16D;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 5px; }
+  .info_item a {
+    color: #669AFF;
+    font-size: 18px; }
+  .info_item li {
+    margin-bottom: 10px; }
 
-.profit .item {
-  text-align: center;
-  margin: 8px;
-  padding: 8px;
-  flex-basis: 200px;
-}
+.info_item.big .text {
+  margin-left: 110px; }
 
-.profit .item .subtitle {
-  color: #fff;
-  font-size: 1.5rem;
-  margin: 3px 0;
-}
+.info_item.big img {
+  width: 70px; }
 
-.profit .item .text {
-  color: #fdb11e;
-}
+.pt18 {
+  padding-top: 18px; }
 
-.profit .item .text:hover {
-  color: blue;
-}
+.privilege .info_item {
+  margin-bottom: 0; }
 
-@media screen and (max-width: 992px) {
-  .profit .item .text {
-    font-size: 1.2rem;
-  }
-}
+.main_block .info_item .text {
+  font-size: 18px;
+  line-height: 24px; }
 
-.profit .item input::-webkit-input-placeholder {
-  color: #f0f;
-}
+.choise_link {
+  background: #BD9D61;
+  display: inline-block;
+  border-radius: 32px;
+  color: #ffffff;
+  font-family: "Intro";
+  text-transform: uppercase;
+  font-size: 24px;
+  padding: 19px 20px 13px; }
+  .choise_link:hover {
+    color: #ffffff; }
 
-.profit .item input::-moz-placeholder {
-  color: #f0f;
-}
+.more_link {
+  border: 2px solid #669AFF;
+  display: inline-block;
+  border-radius: 32px;
+  color: #669AFF;
+  font-size: 18px;
+  padding: 14px 20px 14px;
+  margin-bottom: 60px; }
+  .more_link:hover {
+    color: #669AFF; }
 
-.profit .item input:-moz-placeholder {
-  color: #f0f;
-}
+.about {
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 50px; }
 
-.profit .item input:-ms-input-placeholder {
-  color: #f0f;
-}
+.swiper-slide {
+  padding: 110px 0 0 0; }
+
+.cards {
+  position: fixed;
+  right: 35px;
+  top: 160px;
+  z-index: 2; }
+  .cards .card {
+    margin-bottom: 30px;
+    transition: 400ms all;
+    box-shadow: 0px 25px 10px -15px rgba(198, 160, 108, 0.5);
+    border-radius: 10px;
+    width: 230px;
+    height: 155px;
+    cursor: pointer; }
+    .cards .card:hover {
+      width: 396px;
+      height: 270px; }
+  .cards .card1 {
+    background: url("../img/card1.svg") 0 0 no-repeat;
+    background-size: cover; }
+  .cards .card2 {
+    background: url("../img/card2.svg") 0 0 no-repeat;
+    background-size: cover; }
+  .cards .card3 {
+    background: url("../img/card3.svg") 0 0 no-repeat;
+    background-size: cover; }
