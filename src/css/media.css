@@ -15,10 +15,7 @@
         padding: 20px 15px;
     }
 
-    .main_screen{
-        height: auto;
-        padding-top: 0;
-    }
+
 
     .main_block h1 {
         font-size: 30px;
@@ -26,7 +23,15 @@
         margin: 0 0 50px 0;
     }
     .section-slide {
-        padding: 0 0 400px 0;
+        padding: 0 0 360px 0;
+    }
+    .main_screen{
+        height: auto;
+        padding: 0;
+    }
+
+    .main_screen.section-slide{
+        padding: 0;
     }
 
     .sending .section-slide{
@@ -34,8 +39,8 @@
     }
     .cards {
         margin-top: 100px;
-        overflow-x: scroll;
          flex-direction: row;
+        justify-content: center;
          align-items: center;
          position: static;
         width: 100%;
@@ -45,6 +50,7 @@
          flex-direction: row;
         align-items: center;
         justify-content: center;
+        width: 280px;
     }
 
     .choise .cards .nav{
@@ -74,7 +80,7 @@
     .order_form{
         width: 100%;
         right: 0;
-        bottom: 70px;
+        bottom: 0;
     }
 
     .title-h{

@@ -231,9 +231,10 @@ h1{
     background-color: #ffffff;
 
 
-    &:hover{
+    &:hover, &:focus{
         color: #ffffff;
         background: #BD9D61;
+        outline: none;
     }
 }
 
@@ -406,6 +407,7 @@ h1{
     padding: 15px;
     bottom: -320px;
     right: 105px;
+    z-index: 15;
 
     .input_line{
         margin-bottom: 10px;
