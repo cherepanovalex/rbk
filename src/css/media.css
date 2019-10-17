@@ -26,7 +26,11 @@
         margin: 0 0 50px 0;
     }
     .section-slide {
-        padding: 0 0 370px 0;
+        padding: 0 0 400px 0;
+    }
+
+    .sending .section-slide{
+        padding: 0 0 130px 0;
     }
     .cards {
         margin-top: 100px;
@@ -60,8 +64,8 @@
     }
 
     .cards .card_block.active .card{
-        width: 230px;
-        height: 155px;
+        width: 280px;
+        height: 190px;
     }
 
     body.choise .cards {
@@ -70,7 +74,15 @@
     .order_form{
         width: 100%;
         right: 0;
-        bottom: 0;
+        bottom: 70px;
+    }
+
+    .title-h{
+        margin-bottom: 20px;
+        margin-top: 100px;
+    }
+    .cards.main-page{
+        margin-top: 0;
     }
 
 
@@ -105,6 +117,8 @@
     .section-slide {
         padding: 0 0 370px 0;
     }
+
+
     .cards {
         margin-top: 100px;
         overflow-x: scroll;

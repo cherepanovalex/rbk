@@ -73,7 +73,7 @@
                     <!--форма заказа скрывается на мобиле и планшете-->
                     <div class="order_form order_form1">
                         <span class="close-ico close-ico1"></span>
-                        <form>
+                        <form class="form">
                             <div class="input_line">
                                 <p><label for="name1">Имя</label></p>
                                 <input type="text" placeholder="" id="name1">
@@ -98,6 +98,7 @@
                             </div>
                             <input type="submit" value="Заказать" class="get_order_btn">
                         </form>
+                        <div class="send_message">"Ваше сообщение отправлено"</div>
                     </div>
                 </li>
                 <li class="card_block card_block2 ">
@@ -240,9 +241,11 @@
                         </div>
                     </div>
 
-
+                    <div class="visible-xs">
+                    <div class="order-link-block"> <a href="#bottom_order" class="order_link">Заказать</a></div>
+                    </div>
                     <div class="co">Лицензия № 1.2.56/234 выдана Национальным Банком РК 14.08.2018г.</div>
-
+                    <div id="bottom_order"></div>
                 </div>
             </div>
         </div>

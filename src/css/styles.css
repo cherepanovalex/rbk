@@ -1,17 +1,14 @@
 @font-face {
-  font-family: "Intro";
-  src: url("../fonts/intro.eot?#iefix") format("embedded-opentype"), url("../fonts/intro.otf") format("opentype"), url("../fonts/intro.svg") format("svg"), url("../fonts/intro.ttf") format("truetype"), url("../fonts/intro.woff") format("woff"), url("../fonts/intro.woff2") format("woff2");
-  /* Modern Browsers */
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   src: url("../fonts/DINPro-Regular.ttf");
   font-family: 'Din'; }
 
 @font-face {
   src: url("../fonts/DINPro-Bold.ttf");
   font-family: 'DinBold'; }
+
+@font-face {
+  src: url("../fonts/intro.ttf");
+  font-family: 'Intro'; }
 
 body {
   font-size: 14px;
@@ -184,26 +181,16 @@ h1 {
   display: inline-block;
   border-radius: 32px;
   color: #BD9D61;
-  font-size: 24px;
-  padding: 16px 20px 12px;
+  font-size: 18px;
+  padding: 11px 20px 7px;
   cursor: pointer;
   font-family: "Intro";
   text-transform: uppercase;
-  opacity: 0;
-  visibility: hidden;
-  left: 0;
-  bottom: -50px;
   transition: 400ms all;
-  position: absolute; }
+  background-color: #ffffff; }
   .order_link:hover {
     color: #ffffff;
     background: #BD9D61; }
-
-.active .order_link {
-  opacity: 1;
-  left: 0;
-  bottom: -50px;
-  visibility: visible; }
 
 .about {
   font-size: 24px;
@@ -393,3 +380,19 @@ h1 {
 
 select::-ms-expand {
   display: none; }
+
+.order-link-block {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 5; }
+
+.send_message {
+  display: none;
+  font-size: 20px;
+  text-align: center; }

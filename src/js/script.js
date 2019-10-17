@@ -23,6 +23,14 @@ $(function () {
         $(this).addClass('active');
     });
 
+    //hide form on send
+    $('.get_order_btn').on('click', function (e) {
+        e.preventDefault();
+        $('.form').hide();
+        $('body').addClass('sending')
+        $('.send_message').show();
+    });
+
 
 
 
