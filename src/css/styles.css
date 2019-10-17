@@ -1,46 +1,41 @@
 @font-face {
-  font-family: "OpenSans";
-  src: url("../fonts/OpenSans-Regular.eot");
-  /* IE9 Compat Modes */
-  src: url("../fonts/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Regular.otf") format("opentype"), url("../fonts/OpenSans-Regular.svg") format("svg"), url("../fonts/OpenSans-Regular.ttf") format("truetype"), url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
-  /* Modern Browsers */
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
   font-family: "Intro";
-  src: url("../fonts/intro.eot");
-  /* IE9 Compat Modes */
   src: url("../fonts/intro.eot?#iefix") format("embedded-opentype"), url("../fonts/intro.otf") format("opentype"), url("../fonts/intro.svg") format("svg"), url("../fonts/intro.ttf") format("truetype"), url("../fonts/intro.woff") format("woff"), url("../fonts/intro.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  src: url("../fonts/DINPro-Regular.ttf");
+  font-family: 'Din'; }
+
+@font-face {
+  src: url("../fonts/DINPro-Bold.ttf");
+  font-family: 'DinBold'; }
+
 body {
   font-size: 14px;
   line-height: 16px;
   color: #242935;
-  font-family: "Open Sans";
-  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,fdf6e8+100 */
+  font-family: "Din";
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+79,fdf6e8+100 */
   background: #ffffff;
   /* Old browsers */
-  background: -moz-linear-gradient(45deg, #ffffff 0%, #fdf6e8 100%);
+  background: -moz-linear-gradient(45deg, #ffffff 79%, #fdf6e8 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #ffffff 0%, #fdf6e8 100%);
+  background: -webkit-linear-gradient(45deg, #ffffff 79%, #fdf6e8 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #ffffff 0%, #fdf6e8 100%);
+  background: linear-gradient(45deg, #ffffff 79%, #fdf6e8 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fdf6e8',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */ }
-  body:before {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: url("../img/cover.svg") 0 0 no-repeat;
-    content: "";
-    display: block;
-    width: 700px;
-    height: 100%; }
+
+strong {
+  font-family: 'DinBold'; }
+
+.wrapper {
+  background: url("../img/cover.svg") right 0 no-repeat;
+  overflow: hidden; }
 
 a:hover {
   text-decoration: none; }
@@ -56,11 +51,17 @@ a:focus {
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   width: 100%;
-  padding: 0 35px;
+  padding: 20px 35px;
   left: 0;
-  top: 45px; }
+  top: 0;
+  background: rgba(189, 158, 115, 0.6); }
+
+.logo {
+  padding-top: 7px;
+  display: inline-block;
+  cursor: pointer; }
 
 .card_type {
   list-style: none;
@@ -87,7 +88,7 @@ header {
     font-size: 18px;
     line-height: 35px;
     padding: 0 16px;
-    color: #BD9D61;
+    color: #ffffff;
     display: inline-block;
     border-radius: 20px; }
     .lang a:last-child {
@@ -107,7 +108,8 @@ h1 {
   background: linear-gradient(#dbb17d, #bd9e73);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0 0 50px 0; }
+  margin: 0 0 50px 0;
+  word-break: break-word; }
 
 .main_block h1 {
   font-size: 64px;
@@ -172,31 +174,111 @@ h1 {
   margin-bottom: 60px; }
   .more_link:hover {
     color: #669AFF; }
+  .more_link:active {
+    color: #669AFF; }
+  .more_link:focus {
+    color: #669AFF; }
+
+.order_link {
+  border: 2px solid #BD9D61;
+  display: inline-block;
+  border-radius: 32px;
+  color: #BD9D61;
+  font-size: 24px;
+  padding: 16px 20px 12px;
+  cursor: pointer;
+  font-family: "Intro";
+  text-transform: uppercase;
+  opacity: 0;
+  visibility: hidden;
+  left: 0;
+  bottom: -50px;
+  transition: 400ms all;
+  position: absolute; }
+  .order_link:hover {
+    color: #ffffff;
+    background: #BD9D61; }
+
+.active .order_link {
+  opacity: 1;
+  left: 0;
+  bottom: -50px;
+  visibility: visible; }
 
 .about {
   font-size: 24px;
   line-height: 32px;
   margin-bottom: 50px; }
 
-.swiper-slide {
-  padding: 110px 0 0 0; }
+.section-slide {
+  padding: 110px 0 60px 0;
+  position: relative; }
+
+.co {
+  position: absolute;
+  bottom: 40px; }
+
+.cards .nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; }
+
+.cards .nav > li > a {
+  padding: 0; }
 
 .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   position: fixed;
   right: 35px;
-  top: 160px;
-  z-index: 2; }
+  top: 90px;
+  z-index: 2;
+  width: 396px;
+  transition: 600ms all; }
+  body.choise .cards {
+    top: 80px; }
+    body.choise .cards .card {
+      width: 95px;
+      height: 64px; }
+      body.choise .cards .card:before {
+        transition: 400ms all;
+        content: "";
+        display: block;
+        width: 90px;
+        height: 64px;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        box-shadow: 0px 25px 10px -15px rgba(198, 160, 108, 0.5); }
   .cards .card {
     margin-bottom: 30px;
     transition: 400ms all;
-    box-shadow: 0px 25px 10px -15px rgba(198, 160, 108, 0.5);
-    border-radius: 10px;
+    float: right;
     width: 230px;
     height: 155px;
-    cursor: pointer; }
-    .cards .card:hover {
+    cursor: pointer;
+    display: block;
+    position: relative; }
+    .cards .card:before {
+      transition: 400ms all;
+      content: "";
+      display: block;
+      width: 220px;
+      height: 155px;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      box-shadow: 0px 25px 10px -15px rgba(198, 160, 108, 0.5); }
+  .cards .card_block {
+    position: relative; }
+    .cards .card_block.is-active {
+      z-index: 2; }
+    .cards .card_block.is-active .card {
       width: 396px;
       height: 270px; }
+      .cards .card_block.is-active .card:before {
+        width: 380px; }
   .cards .card1 {
     background: url("../img/card1.svg") 0 0 no-repeat;
     background-size: cover; }
@@ -206,3 +288,108 @@ h1 {
   .cards .card3 {
     background: url("../img/card3.svg") 0 0 no-repeat;
     background-size: cover; }
+
+.card_block.active {
+  order: -3; }
+
+.card_block1.active .order_form1 {
+  display: block; }
+
+.card_block2.active .order_form2 {
+  display: block; }
+
+.card_block3.active .order_form3 {
+  display: block; }
+
+.cards .card_block.active {
+  z-index: 2; }
+
+.cards .card_block.active .card {
+  width: 396px;
+  height: 270px; }
+  .cards .card_block.active .card:before {
+    width: 380px; }
+
+.main_screen {
+  height: 100vh; }
+
+.main_block {
+  padding-top: 30px; }
+
+.order_form1,
+.order_form2,
+.order_form3 {
+  display: none; }
+
+.order_form {
+  width: 290px;
+  position: absolute;
+  border-radius: 20px;
+  background: #FFFFFF;
+  border: 1px solid #C6A06C;
+  box-shadow: 0px 30px 40px rgba(198, 160, 108, 0.4);
+  padding: 15px;
+  bottom: -320px;
+  right: 105px; }
+  .order_form .input_line {
+    margin-bottom: 10px; }
+  .order_form p {
+    margin-bottom: 0; }
+  .order_form label {
+    font-weight: normal;
+    font-size: 14px;
+    opacity: 0.6; }
+  .order_form input {
+    border: 1px solid #c5c5c5;
+    border-radius: 3px;
+    line-height: 30px;
+    width: 100%;
+    padding: 0 5px; }
+    .order_form input.get_order_btn {
+      border: 2px solid #BD9D61;
+      display: inline-block;
+      border-radius: 32px;
+      color: #BD9D61;
+      font-size: 18px;
+      padding: 10px 20px 6px;
+      cursor: pointer;
+      font-family: "Intro";
+      text-transform: uppercase;
+      width: auto;
+      line-height: normal;
+      margin: 10px 0 0 0;
+      background: #ffffff; }
+      .order_form input.get_order_btn:hover {
+        background: #BD9D61;
+        color: #ffffff; }
+  .order_form .close-ico {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    background: url("../img/close.png") 0 0 no-repeat;
+    width: 24px;
+    height: 24px;
+    display: none; }
+
+.select {
+  border: 1px solid #c5c5c5;
+  line-height: 30px;
+  border-radius: 3px;
+  padding: 0 5px;
+  background: url("../img/arrow-drop.svg") 98% center no-repeat; }
+  .select select {
+    width: 100%;
+    border: none;
+    background: none;
+    -webkit-appearance: none;
+    appearance: none; }
+
+.t20 {
+  font-size: 20px; }
+
+:focus {
+  outline: none; }
+
+select::-ms-expand {
+  display: none; }

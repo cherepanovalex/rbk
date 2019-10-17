@@ -1,10 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="">
+    <meta name="yandex-verification" content="c58bf8500c7d3566"/>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
+    <title>RBK</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="RBK"/>
+    <meta name="keywords" content=""/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+
+    <script type="text/javascript" src="js/jquery.inputmask.min.js"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+
+    <![endif]-->
 </head>
-<body>
-$END$
+
+<body class="choise">
+<div class="wrapper">
+    <div class="container">
+        <header>
+            <div class="row">
+                <div class="col-lg-4 col-md-3 col-sm-3 col-xs-6">
+                    <a href="index.html" class="logo"><img src="img/logo.svg"></a>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 hidden-xs">
+                    <ul class="card_type">
+                        <li><a href="gold.html#screen2">Gold</a></li>
+                        <li><a href="platina.html#screen3">Platinum</a></li>
+                        <li><a href="infinite.html#screen4">Infinite</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-3 col-sm-3 col-xs-6">
+                    <div class="lang clearfix">
+                        <a href="#" class="active">RU</a>
+                        <a href="#">KZ</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="cards">
+            <ul class="nav">
+                <li class="card_block card_block1 active">
+                    <a href="#screen2"  >
+                        <div  class="card card1">
+                        </div>
+                    </a>
+                    <!--форма заказа скрывается на мобиле и планшете-->
+                    <div class="order_form order_form1">
+                        <span class="close-ico close-ico1"></span>
+                        <form>
+                            <div class="input_line">
+                                <p><label for="name1">Имя</label></p>
+                                <input type="text" placeholder="" id="name1">
+                            </div>
+                            <div class="input_line">
+                                <p><label for="num1">Телефон</label></p>
+                                <input type="tel" placeholder="" id="num1" class="tel">
+                            </div>
+                            <div class="input_line">
+                                <p><label for="city1">Город</label></p>
+                                <div class="select">
+                                    <select id="city1">
+                                        <option>Алматы </option>
+                                        <option>Нур-Султан</option>
+                                        <option>Караганда</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input_line">
+                                <p><label for="iin1">ИИН</label></p>
+                                <input type="number" placeholder="" id="iin1" onkeypress="if(this.value.length&gt;11) return false;">
+                            </div>
+                            <input type="submit" value="Заказать" class="get_order_btn">
+                        </form>
+                    </div>
+                </li>
+                <li class="card_block card_block2 ">
+                    <a href="platina.html"  >
+                        <div  class="card card2">
+                        </div>
+                    </a>
+                </li>
+                <li class="card_block card_block3 ">
+                    <a href="infinite.html"  >
+                        <div  class="card card3">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+
+
+        <div class="section-slide" id="screen2">
+            <div class="content_section">
+                <div>
+                    <p>Visa Gold</p>
+                    <h1>
+                        Заказывайте карты и любая покупка будет удовольствием
+                    </h1>
+                    <p class="t20">Интересные предложения и дополнительные преимущества:</p>
+                    <div class="privilege">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="info_item">
+                                    <img src="img/m6-ico.svg">
+                                    <div class="text">
+                                        <div class="title">Бесплатное ежемесячное обслуживание</div>
+                                        При обороте от 120 тысяч в месяц
+                                    </div>
+                                </div>
+
+                                <div class="info_item">
+                                    <img src="img/m8-ico.svg">
+                                    <div class="text">
+                                        <div class="title">Уникальный LED диод</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="info_item">
+                                    <img src="img/m7-ico.svg">
+                                    <div class="text">
+                                        <div class="title">Cashback в размере 1,2%</div>
+                                        Моментально, реальными деньгами, по всему миру
+                                    </div>
+                                </div>
+
+                                <div class="info_item">
+                                    <img src="img/m9-ico.svg">
+                                    <div class="text">
+                                        <div class="title">Бесплатное снятие</div>
+                                        В любом банкомате до 300 тысяч в месяц
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="more_link">Подробнее о тарифах</a>
+
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="info_item">
+                                <img src="img/m4-ico.svg">
+                                <div class="text">
+                                    <div class="title">Страхование выезжающих за рубеж</div>
+                                    <p>Страховое покрытие до 3,4 млн тенге. Действие страхового сертификата
+                                        распространяется на членов семьи держателя платежной карточки.
+                                        Содействие во время путешествий от компании ISOS.</p>
+
+                                    <p>Количество поездок в течение срока действия страховой защиты не
+                                        ограничено.
+                                        Срок
+                                        пребывания за границей до 90 дней.
+                                        Страховка действует по всему миру и дает возможность оформить визу для
+                                        зарубежных поездок.</p>
+
+                                    <p> Страховка включает: возмещение медицинских расходов при несчастном
+                                        случае
+                                        или
+                                        внезапном заболевании, эвакуацию; возмещение в случае задержки или утери
+                                        багажа.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="info_item">
+                                <img src="img/m10-ico.svg">
+                                <div class="text">
+                                    <div class="title">Глобальная служба поддержки держателей платежных карточек
+                                        GCAS
+                                    </div>
+                                    <p>Если Вы потеряли свою карточку, или она была украдена,
+                                        Вы можете рассчитывать на экстренную помощь 24/7
+                                        от глобальной службы клиентской поддержки GCAS (Global Customer
+                                        Assistance
+                                        Service).</p>
+                                    <p>Представители GCAS оперативно помогут Вам:</p>
+                                    <ul>
+                                        <li>заблокируют Ваш счет в течение 30 минут, защитив его от
+                                            мошеннических
+                                            операций;
+                                        </li>
+                                        <li>доставят в течение 3-х рабочих дней новую карточку;</li>
+                                        <li> предоставят возможность экстренной выдачи наличных в 270 000 точек
+                                            по
+                                            всему
+                                            миру.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="info_item">
+                                <img src="img/m11-ico.svg">
+                                <div class="text">
+                                    <div class="title">Мир привилегий и уникальные предложения
+                                    </div>
+                                    <p>
+                                        При оплате карточкой Visa Gold в Вашем Пакете Вы сможете получить
+                                        скидки,
+                                        выгодные предложения,
+                                        специальные цены и просто насладиться высококачественным сервисом в
+                                        более
+                                        чем 20 000 торговых точек мира, в том числе и в Казахстане!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="co">Лицензия № 1.2.56/234 выдана Национальным Банком РК 14.08.2018г.</div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
 </body>
+
 </html>
