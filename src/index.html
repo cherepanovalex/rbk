@@ -2,6 +2,13 @@
 <html>
 
 <head>
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MVSWQZ5');</script>
+<!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +26,7 @@
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link href="scss/custom.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/media.css" rel="stylesheet">
@@ -39,27 +47,36 @@
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVSWQZ5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div class="wrapper">
     <div class="container">
         <header>
             <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-3 col-sm-3 col-xs-6">
+                <div class="col-lg-4 col-md-3 col-sm-3 col-xs-5">
                     <a href="index.html" class="logo"><img src="img/logo.svg"></a>
                 </div>
-                <div class="col-lg-4 col-md-5 col-sm-6 hidden-xs">
+                <div class="col-lg-4 col-md-5 col-sm-5 hidden-xs">
                     <ul class="card_type">
-                        <li><a href="gold.html#screen2">Gold</a></li>
-                        <li><a href="platina.html#screen3">Platinum</a></li>
-                        <li><a href="infinite.html#screen4">Infinite</a></li>
+                        <li><a href="gold.html">Gold</a></li>
+                        <li><a href="platina.html">Platinum</a></li>
+                        <li><a href="infinite.html">Infinite</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-4 col-md-3 col-sm-3 col-xs-6">
-                    <div class="lang clearfix">
-                        <a href="#" class="active">RU</a>
-                        <a href="#">KZ</a>
+                
+                <div class="col-lg-4 col-md-3 col-sm-4 col-xs-7">
+                     <!--<div class="lang clearfix">-->
+                        <!--<a href="#" class="active">RU</a>-->
+                        <!--<a href="#">KZ</a>-->
+                    <!--</div>-->
+                    <div class="telephone">
+                        <a href="tel:7888" class="call_block active">7888</a>
                     </div>
                 </div>
+            
             </div>
             </div>
         </header>
@@ -67,24 +84,31 @@
         <h1 class="title-h visible-xs">
             Карты для людей с горящими глазами
         </h1>
-        <div class="card-list">
+
+        <div class="subtitle text-center visible-xs">Выберите карту</div>
+        <div class="card-slider">
+            <div class="left-arr visible-xs"></div>
+            <div class="right-arr visible-xs"></div>
+
+        <div class="card-list cards-list-mainpage">
+
         <nav class="cards main-page">
             <ul class="nav" data-spy="affix" data-offset-top="205">
                 <li class="card_block card_block1">
-                    <a href="gold.html#screen2"  >
+                    <a href="gold.html">
                     <div  class="card card1">
                     </div>
                 </a>
                 </li>
                 <li class="card_block card_block2">
-                    <a href="platina.html#screen3"  >
+                    <a href="platina.html"  >
                         <div  class="card card2">
                         </div>
                     </a>
                 </li>
 
                 <li class="card_block card_block3">
-                    <a href="infinite.html#screen4"  >
+                    <a href="infinite.html"  >
                         <div  class="card card3">
                         </div>
                     </a>
@@ -92,6 +116,7 @@
 
             </ul>
         </nav>
+        </div>
         </div>
 
 
@@ -105,32 +130,42 @@
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                         <div class="info_item">
-                                            <img src="img/m1-ico.svg">
-                                            <div class="text">Уникальный LED <br>диод </div>
+                                            <div class="icon">
+                                                <img src="img/m3-ico.svg">
+                                            </div>
+                                            <div class="text">до 1,5% кэшбек</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                         <div class="info_item">
-                                            <img src="img/m2-ico.svg">
-                                            <div class="text">Выпуск дополнительной <br> карты </div>
+                                            <div class="icon">
+                                                <img src="img/m1-ico.svg">
+                                            </div>
+                                            <div class="text">Уникальный LED <br>диод</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                         <div class="info_item">
-                                            <img src="img/m3-ico.svg">
-                                            <div class="text">1,5% кэшбек</div>
+                                            <div class="icon">
+                                                <img src="img/m2-ico.svg">
+                                            </div>
+                                            <div class="text">Выпуск дополнительной <br>карты</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                         <div class="info_item">
-                                            <img src="img/m4-ico.svg">
-                                            <div class="text">Cтраховое покрытие </div>
+                                            <div class="icon">
+                                                <img src="img/m4-ico.svg">
+                                            </div>
+                                            <div class="text">Cтраховое покрытие</div>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                         <div class="info_item">
-                                            <img src="img/m5-ico.svg">
-                                            <div class="text">Priority pass </div>
+                                            <div class="icon">
+                                                <img src="img/m5-ico.svg">
+                                            </div>
+                                            <div class="text">Priority pass</div>
                                         </div>
                                     </div>
                                 </div>
@@ -138,6 +173,9 @@
 
 
                             <div class="co">Лицензия № 1.2.56/234 выдана Национальным Банком РК 14.08.2018г.</div>
+                            <div class="mainlink visible-xs">
+                                <a href="https://www.bankrbk.kz/rus" target="_blank">bankrbk.kz</a>
+                            </div>
                         </div>
                     </div>
                 </div>

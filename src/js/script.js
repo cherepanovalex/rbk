@@ -32,10 +32,31 @@ $(function () {
     });
 
 
+    var $btn = $('.order-link-block');
+    var $anchor = $('.scroll-anchor');
+
+    if ($btn.length && $anchor.length) {
+        var scroll = function() {
+            var y = $(window).scrollTop();
+            var height = $(window).height();
+            var offset = $anchor.offset().top;
+            if (y+height >= offset) {
+                $btn.addClass('hide-button');
+            } else {
+                $btn.removeClass('hide-button');
+            }
+        };
+
+        scroll();
+
+        $(window).on('scroll', function() {
+            scroll();
+        });
+    }
 
 
 //mask
-    $('.tel').inputmask({"mask": "+7(999) 999-99-99"});
+    $('.tel').inputmask({"mask": "+7(999)-999-9999"});
 
 
 });
