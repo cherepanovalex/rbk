@@ -63,14 +63,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <ul class="card_type">
                         <li><a href="gold.html">Gold</a></li>
                         <li><a href="platina.html">Platinum</a></li>
-                        <li><a href="infinite.html">Infinite</a></li>
+                        <li><a href="infinite_kaz.html">Infinite</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-3 col-sm-3 col-xs-6">
-<!--                     <div class="lang clearfix">
-                        <a href="#" class="active">RU</a>
-                        <a href="#">KZ</a>
-                    </div> -->
+                     <div class="lang clearfix">
+                        <a href="gold.html" class="active">RU</a>
+                        <a href="gold_kaz.html">KZ</a>
+                    </div>
                     <div class="telephone">
                         <a href="tel:7888" class="call_block active">7888</a>
                     </div>
@@ -78,6 +78,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             </div>
         </header>
+        
 
         <div class="card-list">
         <nav class="cards">
@@ -87,44 +88,50 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div  class="card card1">
                         </div>
                     </a>
+
+
                     <!--форма заказа скрывается на мобиле и планшете-->
                     <div class="order_form order_form1">
                         <span class="close-ico close-ico1"></span>
-                        <form class="form">
+
+                        <form class="form" method="post" action="callback.php" id="sending_form">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}" class='tokenZ2z'/>
+                            <input type="hidden" name="cardType" value="gold"/>
                             <div class="input_line">
                                 <p><label for="name1">Имя</label></p>
-                                <input type="text" placeholder="" id="name1">
+                                <input type="text" placeholder="" id="name1" class="name" name="name">
                             </div>
                             <div class="input_line">
                                 <p><label for="num1">Телефон</label></p>
-                                <input type="tel" placeholder="+7(700)-700-7070" id="num1" class="tel">
+                                <input type="tel" placeholder="+7(700)-700-7070" id="num1" class="tel" name="phone">
                             </div>
                             <div class="input_line">
                                 <p><label for="city1">Город</label></p>
                                 <div class="select">
-                                    <select id="city1">
-                                        <option>Алматы</option>
-                                        <option>Нур-Султан</option>
-                                        <option>Караганда</option>
-                                        <option>Павлодар</option>
-                                        <option>Усть-Каменогорск</option>
-                                        <option>Шымкент</option>
-                                        <option>Актау</option>
-                                        <option>Актобе</option>
-                                        <option>Атырау</option>
-                                        <option>Талдыкорган</option>
-                                        <option>Экибастуз</option>
-                                        <option>Семей</option>
-                                        <option>Жезказган</option>
-                                        <option>Балхаш</option>
-                                        <option>Сатпаев</option>
+                                    <select name="city" id="city1" class="js-city-live">
+                                        <option value="Алматы">Алматы</option>
+                                        <option value="Нур-Султан">Нур-Султан</option>
+                                        <option value="Караганда">Караганда</option>
+                                        <option value="Павлодар">Павлодар</option>
+                                        <option value="Усть-Каменогорск">Усть-Каменогорск</option>
+                                        <option value="Шымкент">Шымкент</option>
+                                        <option value="Актау">Актау</option>
+                                        <option value="Актобе">Актобе</option>
+                                        <option value="Атырау">Атырау</option>
+                                        <option value="Талдыкорган">Талдыкорган</option>
+                                        <option value="Экибастуз">Экибастуз</option>
+                                        <option value="Семей">Семей</option>
+                                        <option value="Жезказган">Жезказган</option>
+                                        <option value="Балхаш">Балхаш</option>
+                                        <option value="Сатпаев">Сатпаев</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="input_line">
                                 <p><label for="iin1">ИИН</label></p>
-                                <input type="number" placeholder="" id="iin1" onkeypress="if(this.value.length&gt;11) return false;">
+                                <input type="number" placeholder="" name="iin" id="iin1" onkeypress="if(this.value.length&gt;11) return false;">
                             </div>
+
                             <input type="submit" value="Заказать" class="get_order_btn">
                         </form>
                         <div class="send_message">"Ваше сообщение отправлено"</div>
@@ -140,7 +147,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </li>
                 <li class="card_block card_block3 ">
-                    <a href="infinite.html"  >
+                    <a href="infinite_kaz.html"  >
                         <div  class="card card3">
                         </div>
                     </a>
@@ -198,7 +205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
 
-                    <a href="#" class="more_link">Подробнее о тарифах</a>
+                    <a href="tarifs.pdf" class="more_link" target="_blank">Подробнее о тарифах</a>
 
 
                     <div class="row">
@@ -318,6 +325,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 </div>
+    <script src="js/ajax-form.js"></script>
 </body>
 
 </html>

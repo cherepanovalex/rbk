@@ -65,16 +65,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <ul class="card_type">
                         <li><a href="gold.html">Gold</a></li>
                         <li><a href="platina.html">Platinum</a></li>
-                        <li><a href="infinite.html">Infinite</a></li>
+                        <li><a href="infinite_kaz.html">Infinite</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-3 col-sm-3 col-xs-6">
                     <div class="telephone">
                         <a href="tel:7888" class="call_block active">7888</a>
-                    </div>
-
-                    <div class="clearfix">
-                        <a href="tel:7888" class="call-block" class="active">7888</a>
                     </div>
                 </div>
             </div>
@@ -91,40 +87,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                     <div class="order_form order_form2">
                         <span class="close-ico close-ico2"></span>
-                        <form class="form">
+                        <form class="form" method="post" action="callback.php" id="sending_form">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}" class='tokenZ2z'/>
+                            <input type="hidden" name="cardType" value="platina"/>
                             <div class="input_line">
                                 <p><label for="name2">Имя</label></p>
-                                <input type="text" placeholder="" id="name2">
+                                <input type="text" placeholder="" id="name2" class="name" name="name">
                             </div>
                             <div class="input_line">
                                 <p><label for="num2">Телефон</label></p>
-                                <input type="tel" placeholder="+7(700)-700-7070" id="num2" class="tel">
+                                <input type="tel" placeholder="+7(700)-700-7070" id="num2" class="tel" name="phone">
                             </div>
                             <div class="input_line">
                                 <p><label for="city2">Город</label></p>
                                 <div class="select">
-                                    <select id="city2">
-                                        <option>Алматы</option>
-                                        <option>Нур-Султан</option>
-                                        <option>Караганда</option>
-                                        <option>Павлодар</option>
-                                        <option>Усть-Каменогорск</option>
-                                        <option>Шымкент</option>
-                                        <option>Актау</option>
-                                        <option>Актобе</option>
-                                        <option>Атырау</option>
-                                        <option>Талдыкорган</option>
-                                        <option>Экибастуз</option>
-                                        <option>Семей</option>
-                                        <option>Жезказган</option>
-                                        <option>Балхаш</option>
-                                        <option>Сатпаев</option>
+                                    <select name="city" id="city2" class="js-city-live">
+                                        <option value="Алматы">Алматы</option>
+                                        <option value="Нур-Султан">Нур-Султан</option>
+                                        <option value="Караганда">Караганда</option>
+                                        <option value="Павлодар">Павлодар</option>
+                                        <option value="Усть-Каменогорск">Усть-Каменогорск</option>
+                                        <option value="Шымкент">Шымкент</option>
+                                        <option value="Актау">Актау</option>
+                                        <option value="Актобе">Актобе</option>
+                                        <option value="Атырау">Атырау</option>
+                                        <option value="Талдыкорган">Талдыкорган</option>
+                                        <option value="Экибастуз">Экибастуз</option>
+                                        <option value="Семей">Семей</option>
+                                        <option value="Жезказган">Жезказган</option>
+                                        <option value="Балхаш">Балхаш</option>
+                                        <option value="Сатпаев">Сатпаев</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="input_line">
                                 <p><label for="iin2">ИИН</label></p>
-                                <input type="number" placeholder="" id="iin2" onkeypress="if(this.value.length&gt;11) return false;">
+                                <input type="number" placeholder="" name="iin" id="iin2" onkeypress="if(this.value.length&gt;11) return false;">
                             </div>
                             <input type="submit" value="Заказать" class="get_order_btn">
                         </form>
@@ -142,7 +140,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </a>
                 </li>
                 <li class="card_block card_block3 ">
-                    <a href="infinite.html"  >
+                    <a href="infinite_kaz.html"  >
                         <div  class="card card3">
                         </div>
                     </a>
@@ -210,7 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
 
-                    <a href="#" class="more_link">Подробнее о тарифах</a>
+                    <a href="tarifs.pdf" class="more_link" target="_blank">Подробнее о тарифах</a>
 
 
                     <div class="row">
@@ -416,6 +414,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 </div>
+    <script src="js/ajax-form.js"></script>
 </body>
 
 </html>
