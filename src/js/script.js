@@ -58,5 +58,32 @@ $(function () {
 //mask
     $('.tel').inputmask({"mask": "+7(999)-999-9999"});
 
+    //проверка доступности кнопки сабмита у форм
+    $('.order_form').each(function() {
+        var $form = $(this).find('form');
+        var $btn = $form.find('input[type="submit"]');
+        var $inps = $form.find('input[type="text"], input[type="tel"], input[type="number"], select');
+
+        var check = function() {
+            var enable = true;
+            $inps.each(function() {
+                var $inp = $(this);
+                var value = $inp.val();
+                if (!value||value.indexOf('_')>0) enable = false;
+            });
+            $btn.attr('disabled', !enable);
+        };
+
+        check();
+
+        $inps.filter('input[type="number"]').on('keypress', function(e) {
+            var key = e.which;
+            if (key<48||key>57) return false;
+        });
+
+        $inps.on('change focus blur keyup', function() {
+            check();
+        });
+    });
 
 });
